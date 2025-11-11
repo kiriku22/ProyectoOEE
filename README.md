@@ -8,6 +8,6 @@
 
 # CONSULTAS SQL
 
-## produccion Operarios:
-## SELECT operario, MAX(pacas_producidas) FROM MAQUINARIA_PINTURAS.ProduccionOperario where operario != 'No aplica' GROUP BY operario LIMIT 50 
+## Produccion Operarios:
+### - SELECT operario, MAX(pacas_producidas) FROM MAQUINARIA_PINTURAS.ProduccionOperario where operario != 'No aplica' GROUP BY operario LIMIT 50 
 
