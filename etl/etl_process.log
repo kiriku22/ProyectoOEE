@@ -1,0 +1,150 @@
+2025-11-12 02:20:02,287 - INFO - 🚀 Iniciando ETL para SEGUIMIENTO TEMPERAS Y VINILOS...
+2025-11-12 02:20:02,373 - INFO - ✅ Conectado a MySQL
+2025-11-12 02:20:02,373 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 02:20:02,565 - INFO - ✅ Hoja encontrada: Base De Datos
+2025-11-12 02:20:05,360 - INFO - 📊 Datos cargados: 8216 filas, 58 columnas
+2025-11-12 02:21:05,495 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 02:21:05,519 - INFO - Filas después de eliminar vacías: 8209/8216
+2025-11-12 02:21:05,537 - INFO - Columnas después de eliminar vacías: 58/58
+2025-11-12 02:21:05,560 - INFO - ✅ Datos limpiados: 8209 filas, 58 columnas
+2025-11-12 02:21:05,611 - INFO - 💾 Cargando datos a MySQL...
+2025-11-12 02:21:07,138 - INFO - ✅ Tabla 'seguimiento_temperas_vinilos' cargada exitosamente
+2025-11-12 02:21:07,138 - INFO - 📊 Total de registros: 8209
+2025-11-12 02:21:07,154 - INFO - 🎉 ETL completado exitosamente!
+2025-11-12 21:26:54,811 - INFO - ✅ Conectado a MySQL
+2025-11-12 21:26:54,812 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 21:26:59,965 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 21:26:59,998 - ERROR - Error limpiando datos: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-11-12 21:32:07,032 - INFO - ✅ Conectado a MySQL
+2025-11-12 21:32:07,033 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 21:32:11,575 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 21:32:11,624 - ERROR - Error limpiando datos: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-11-12 21:37:45,363 - INFO - ✅ Conectado a MySQL
+2025-11-12 21:37:45,363 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 21:37:49,898 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 21:37:49,921 - ERROR - Error limpiando datos: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-11-12 21:37:49,926 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 286, in clean_and_transform_data
+    if null_count > 0:
+       ^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 1577, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+
+2025-11-12 21:42:35,257 - INFO - ✅ Conectado a MySQL
+2025-11-12 21:42:35,257 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 21:42:39,689 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 21:42:39,710 - ERROR - Error limpiando datos: can only convert an array of size 1 to a Python scalar
+2025-11-12 21:42:39,712 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 288, in clean_and_transform_data
+    null_count = df[col].isna().sum().item()  # .item() asegura que sea un valor escalar
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/base.py", line 422, in item
+    raise ValueError("can only convert an array of size 1 to a Python scalar")
+ValueError: can only convert an array of size 1 to a Python scalar
+
+2025-11-12 21:46:21,077 - INFO - ✅ Conectado a MySQL
+2025-11-12 21:46:21,078 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 21:46:25,487 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 21:46:25,521 - ERROR - Error limpiando datos: arg must be a list, tuple, 1-d array, or Series
+2025-11-12 21:46:25,523 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 298, in clean_and_transform_data
+    df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/tools/numeric.py", line 209, in to_numeric
+    raise TypeError("arg must be a list, tuple, 1-d array, or Series")
+TypeError: arg must be a list, tuple, 1-d array, or Series
+
+2025-11-12 21:55:53,724 - INFO - ✅ Conectado a MySQL
+2025-11-12 21:55:53,725 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 21:55:58,201 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 21:55:58,907 - ERROR - Error limpiando datos: 'DataFrame' object has no attribute 'dtype'
+2025-11-12 21:55:58,911 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 374, in clean_and_transform_data
+    if col in self.columnas_numericas and df[col].dtype == 'object':
+                                          ^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6318, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'dtype'. Did you mean: 'dtypes'?
+
+2025-11-12 21:56:33,714 - INFO - ✅ Conectado a MySQL
+2025-11-12 21:56:33,714 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 21:56:38,230 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 21:56:38,975 - ERROR - Error limpiando datos: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-11-12 21:56:38,978 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 374, in clean_and_transform_data
+    if col in self.columnas_numericas and df[col].dtypes == 'object':
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 1577, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+
+2025-11-12 21:57:23,116 - INFO - ✅ Conectado a MySQL
+2025-11-12 21:57:23,116 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 21:57:27,530 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 21:57:28,277 - ERROR - Error limpiando datos: 'DataFrame' object has no attribute 'dtype'
+2025-11-12 21:57:28,281 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 374, in clean_and_transform_data
+    if col in self.columnas_numericas and df[col].dtype == 'object':
+                                          ^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6318, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'dtype'. Did you mean: 'dtypes'?
+
+2025-11-12 22:01:42,417 - INFO - ✅ Conectado a MySQL
+2025-11-12 22:01:42,417 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 22:01:46,794 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 22:01:46,911 - ERROR - Error limpiando datos: 'DataFrame' object has no attribute 'dtype'
+2025-11-12 22:01:46,915 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 381, in clean_and_transform_data
+    if df[col].dtype == 'object':
+       ^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6318, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'dtype'. Did you mean: 'dtypes'?
+
+2025-11-12 22:02:41,999 - INFO - ✅ Conectado a MySQL
+2025-11-12 22:02:42,000 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 22:02:46,566 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 22:02:46,680 - ERROR - Error limpiando datos: 'DataFrame' object has no attribute 'dtype'
+2025-11-12 22:02:46,685 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 381, in clean_and_transform_data
+    if df[col].dtype == 'object':
+       ^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6318, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'dtype'. Did you mean: 'dtypes'?
+
+2025-11-12 22:18:25,885 - INFO - ✅ Conectado a MySQL
+2025-11-12 22:18:25,886 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 22:18:30,412 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-12 22:18:31,207 - ERROR - ❌ Error cargando tabla: A column with name 'horas_trabajadas' is already present in table 'seguimiento_temperas_vinilos'.
+2025-11-12 22:23:56,993 - INFO - ✅ Conectado a MySQL
+2025-11-12 22:23:56,994 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-12 22:24:01,416 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-13 13:31:49,303 - ERROR - ❌ Error conectando a MySQL: (mysql.connector.errors.DatabaseError) 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (111)
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-11-13 13:35:22,053 - INFO - ✅ Conectado a MySQL
+2025-11-13 13:35:22,058 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 13:35:25,707 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-13 13:35:26,285 - ERROR - Error creando tablas específicas: "['pacas_producidas', 'tiempo_de_paro'] not in index"
+2025-11-13 13:35:26,368 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 400, in crear_tablas_especificas
+    df_temp = df[columnas_produccion_maquina].copy()
+              ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/ProyectoOEE/.venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4119, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/ProyectoOEE/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/workspaces/ProyectoOEE/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['pacas_producidas', 'tiempo_de_paro'] not in index"
+
+2025-11-13 13:51:36,267 - INFO - ✅ Conectado a MySQL
+2025-11-13 13:51:36,267 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 13:51:39,626 - INFO - 🧹 Limpiando y transformando datos...
