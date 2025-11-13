@@ -148,3 +148,301 @@ KeyError: "['pacas_producidas', 'tiempo_de_paro'] not in index"
 2025-11-13 13:51:36,267 - INFO - ✅ Conectado a MySQL
 2025-11-13 13:51:36,267 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
 2025-11-13 13:51:39,626 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-13 16:19:04,956 - ERROR - ❌ Error conectando a MySQL: (mysql.connector.errors.DatabaseError) 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (111)
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-11-13 16:19:47,471 - INFO - ✅ Conectado a MySQL
+2025-11-13 16:19:47,472 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 16:19:52,885 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-13 16:40:33,281 - INFO - ✅ Conectado a MySQL
+2025-11-13 16:40:33,283 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 16:40:37,681 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-13 16:40:38,491 - ERROR - ❌ Error cargando tabla Produccion_maquina: (mysql.connector.errors.DataError) 1406 (22001): Data too long for column 'turno_final' at row 15
+[SQL: INSERT INTO produccion_maquina (fecha, mes, maquina, pacas_producidas, horas_trabajadas, tiempo_de_paro, turno_inicio, turno_final) VALUES (%(fecha)s, %(mes)s, %(maquina)s, %(pacas_producidas)s, %(horas_trabajadas)s, %(tiempo_de_paro)s, %(turno_inicio)s, %(turno_final)s)]
+[parameters: [{'fecha': datetime.datetime(2025, 3, 25, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'pacas_producidas': 0, 'horas_trabajadas': 9.5, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'pacas_producidas': 0, 'horas_trabajadas': 0.0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}  ... displaying 10 of 1000 total bound parameter sets ...  {'fecha': datetime.datetime(2024, 11, 9, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_1', 'pacas_producidas': 0, 'horas_trabajadas': 7.0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '2pm (Turno 1)'}, {'fecha': datetime.datetime(2024, 11, 8, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_4', 'pacas_producidas': 0, 'horas_trabajadas': 8.0, 'tiempo_de_paro': 0, 'turno_inicio': '10pm', 'turno_final': '6am (Turno 3)'}]]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-11-13 16:40:39,027 - ERROR - ❌ Error cargando tabla Produccion_operario: (mysql.connector.errors.DataError) 1406 (22001): Data too long for column 'turno_final' at row 15
+[SQL: INSERT INTO produccion_operario (fecha, mes, maquina, operario, referencia, pacas_producidas, horas_trabajadas, turno_inicio, turno_final) VALUES (%(fecha)s, %(mes)s, %(maquina)s, %(operario)s, %(referencia)s, %(pacas_producidas)s, %(horas_trabajadas)s, %(turno_inicio)s, %(turno_final)s)]
+[parameters: [{'fecha': datetime.datetime(2025, 3, 25, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'referencia': 'Parchesitos 22cc (6 col)', 'pacas_producidas': 0, 'horas_trabajadas': 9.5, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'referencia': 'Pintorcitos 22cc (6 col)', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'referencia': 'Pintorcitos 22cc (6 col)', 'pacas_producidas': 0, 'horas_trabajadas': 0.0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Eliannis', 'referencia': 'Pintorcitos 22cc (6 col)', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'referencia': 'Pintorcitos 22cc (6 col)', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'operario': 'Yuliana Y.', 'referencia': 'Parchesitos 125 cc', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'operario': 'Lorena T.', 'referencia': 'Parchesitos 125 cc', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'operario': 'Lorena T.', 'referencia': 'Parchesitos 125 cc', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_final': '4:30pm'}  ... displaying 10 of 1000 total bound parameter sets ...  {'fecha': datetime.datetime(2024, 11, 9, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_1', 'operario': '', 'referencia': 'Parchesitos 30cc (12 col)', 'pacas_producidas': 0, 'horas_trabajadas': 7.0, 'turno_inicio': '6am', 'turno_final': '2pm (Turno 1)'}, {'fecha': datetime.datetime(2024, 11, 8, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_4', 'operario': 'Marcela', 'referencia': 'Torre 22cc (6 col)', 'pacas_producidas': 0, 'horas_trabajadas': 8.0, 'turno_inicio': '10pm', 'turno_final': '6am (Turno 3)'}]]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-11-13 16:40:39,762 - ERROR - ❌ Error cargando tabla Produccion_01: (mysql.connector.errors.DataError) 1406 (22001): Data too long for column 'turno_cierre' at row 15
+[SQL: INSERT INTO produccion_01 (fecha, maquina, mes, operario, pacas_producidas, horas_trabajadas, turno_inicio, turno_cierre, horas_no_trabajadas, codigo_de_paro_1, sub_codigo_de_paro_1, tiempo_de_paro) VALUES (%(fecha)s, %(maquina)s, %(mes)s, %(operario)s, %(pacas_producidas)s, %(horas_trabajadas)s, %(turno_inicio)s, %(turno_cierre)s, %(horas_no_trabajadas)s, %(codigo_de_paro_1)s, %(sub_codigo_de_paro_1)s, %(tiempo_de_paro)s)]
+[parameters: [{'fecha': datetime.datetime(2025, 3, 25, 0, 0), 'maquina': 'Vinilos_3', 'mes': 0.0, 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 9.5, 'turno_inicio': '6am', 'turno_cierre': '4:30pm', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'maquina': 'Vinilos_3', 'mes': 0.0, 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_cierre': '4:30pm', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'maquina': 'Vinilos_3', 'mes': 0.0, 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 0.0, 'turno_inicio': '6am', 'turno_cierre': '4:30pm', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'maquina': 'Vinilos_3', 'mes': 0.0, 'operario': 'Eliannis', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_cierre': '4:30pm', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'maquina': 'Vinilos_3', 'mes': 0.0, 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_cierre': '4:30pm', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'maquina': 'Vinilos_2', 'mes': 0.0, 'operario': 'Yuliana Y.', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_cierre': '4:30pm', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'maquina': 'Vinilos_2', 'mes': 0.0, 'operario': 'Lorena T.', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_cierre': '4:30pm', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'maquina': 'Vinilos_2', 'mes': 0.0, 'operario': 'Lorena T.', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'turno_inicio': '6am', 'turno_cierre': '4:30pm', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}  ... displaying 10 of 1000 total bound parameter sets ...  {'fecha': datetime.datetime(2024, 11, 9, 0, 0), 'maquina': 'Vinilos_1', 'mes': 0.0, 'operario': '', 'pacas_producidas': 0, 'horas_trabajadas': 7.0, 'turno_inicio': '6am', 'turno_cierre': '2pm (Turno 1)', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}, {'fecha': datetime.datetime(2024, 11, 8, 0, 0), 'maquina': 'Vinilos_4', 'mes': 0.0, 'operario': 'Marcela', 'pacas_producidas': 0, 'horas_trabajadas': 8.0, 'turno_inicio': '10pm', 'turno_cierre': '6am (Turno 3)', 'horas_no_trabajadas': 0, 'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'tiempo_de_paro': 0}]]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-11-13 16:40:40,438 - ERROR - ❌ Error cargando tabla Produccion_03: (mysql.connector.errors.DataError) 1406 (22001): Data too long for column 'turno_final' at row 15
+[SQL: INSERT INTO produccion_03 (fecha, mes, maquina, operario, pacas_producidas, horas_trabajadas, horas_no_trabajadas, codigo_de_paro_3, subcodigo_3, tiempo_de_paro, turno_inicio, turno_final) VALUES (%(fecha)s, %(mes)s, %(maquina)s, %(operario)s, %(pacas_producidas)s, %(horas_trabajadas)s, %(horas_no_trabajadas)s, %(codigo_de_paro_3)s, %(subcodigo_3)s, %(tiempo_de_paro)s, %(turno_inicio)s, %(turno_final)s)]
+[parameters: [{'fecha': datetime.datetime(2025, 3, 25, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 9.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 0.0, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Eliannis', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'operario': 'Yuliana Y.', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'operario': 'Lorena T.', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'operario': 'Lorena T.', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}  ... displaying 10 of 1000 total bound parameter sets ...  {'fecha': datetime.datetime(2024, 11, 9, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_1', 'operario': '', 'pacas_producidas': 0, 'horas_trabajadas': 7.0, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '2pm (Turno 1)'}, {'fecha': datetime.datetime(2024, 11, 8, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_4', 'operario': 'Marcela', 'pacas_producidas': 0, 'horas_trabajadas': 8.0, 'horas_no_trabajadas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'tiempo_de_paro': 0, 'turno_inicio': '10pm', 'turno_final': '6am (Turno 3)'}]]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-11-13 16:40:41,231 - ERROR - ❌ Error cargando tabla Produccion_05: (mysql.connector.errors.DataError) 1406 (22001): Data too long for column 'turno_final' at row 15
+[SQL: INSERT INTO produccion_05 (fecha, mes, maquina, operario, pacas_producidas, horas_trabajadas, horas_no_trabajadas, codigo_de_paro_5, subcodigo_5, codigo_5_en_horas, area_involucrada_en_subcodigo_5, tiempo_de_paro, turno_inicio, turno_final) VALUES (%(fecha)s, %(mes)s, %(maquina)s, %(operario)s, %(pacas_producidas)s, %(horas_trabajadas)s, %(horas_no_trabajadas)s, %(codigo_de_paro_5)s, %(subcodigo_5)s, %(codigo_5_en_horas)s, %(area_involucrada_en_subcodigo_5)s, %(tiempo_de_paro)s, %(turno_inicio)s, %(turno_final)s)]
+[parameters: [{'fecha': datetime.datetime(2025, 3, 25, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 9.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 0.0, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Eliannis', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_3', 'operario': 'Diana', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 28, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'operario': 'Yuliana Y.', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 27, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'operario': 'Lorena T.', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}, {'fecha': datetime.datetime(2025, 3, 26, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_2', 'operario': 'Lorena T.', 'pacas_producidas': 0, 'horas_trabajadas': 10.5, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '4:30pm'}  ... displaying 10 of 1000 total bound parameter sets ...  {'fecha': datetime.datetime(2024, 11, 9, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_1', 'operario': '', 'pacas_producidas': 0, 'horas_trabajadas': 7.0, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '6am', 'turno_final': '2pm (Turno 1)'}, {'fecha': datetime.datetime(2024, 11, 8, 0, 0), 'mes': 0.0, 'maquina': 'Vinilos_4', 'operario': 'Marcela', 'pacas_producidas': 0, 'horas_trabajadas': 8.0, 'horas_no_trabajadas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'tiempo_de_paro': 0, 'turno_inicio': '10pm', 'turno_final': '6am (Turno 3)'}]]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-11-13 16:40:42,095 - ERROR - ❌ Error cargando tabla Porcentaje_Codigo_paro: (mysql.connector.errors.DataError) 1406 (22001): Data too long for column 'observaciones' at row 296
+[SQL: INSERT INTO porcentaje_codigo_paro (codigo_de_paro_1, sub_codigo_de_paro_1, codigo_1_en_horas, codigo_de_paro_2, codigo_2_en_horas, codigo_de_paro_3, subcodigo_3, codigo_3_en_horas, codigo_de_paro_4, codigo_4_en_horas, codigo_de_paro_5, subcodigo_5, codigo_5_en_horas, area_involucrada_en_subcodigo_5, personal_involucrado, codigo_de_paro_6, codigo_6_en_horas, codigo_de_paro_7, codigo_7_en_horas, codigo_de_paro_8, codigo_8_en_horas, codigo_de_paro_9, codigo_9_en_horas, codigo_de_paro_10, codigo_10_en_horas, codigo_de_paro_11, codigo_11_en_horas, codigo_de_paro_12, codigo_12_en_horas, codigo_de_paro_13, codigo_13_en_horas, codigo_de_paro_14, codigo_14_en_horas, codigo_de_paro_15, codigo_15_en_horas, codigo_de_paro_16, codigo_16_en_horas, codigo_de_paro_17, codigo_17_en_horas, codigo_de_paro_18, codigo_18_en_horas, tiempo_de_paro, observaciones) VALUES (%(codigo_de_paro_1)s, %(sub_codigo_de_paro_1)s, %(codigo_1_en_horas)s, %(codigo_de_paro_2)s, %(codigo_2_en_horas)s, %(codigo_de_paro_3)s, %(subcodigo_3)s, %(codigo_3_en_horas)s, %(codigo_de_paro_4)s, %(codigo_4_en_horas)s, %(codigo_de_paro_5)s, %(subcodigo_5)s, %(codigo_5_en_horas)s, %(area_involucrada_en_subcodigo_5)s, %(personal_involucrado)s, %(codigo_de_paro_6)s, %(codigo_6_en_horas)s, %(codigo_de_paro_7)s, %(codigo_7_en_horas)s, %(codigo_de_paro_8)s, %(codigo_8_en_horas)s, %(codigo_de_paro_9)s, %(codigo_9_en_horas)s, %(codigo_de_paro_10)s, %(codigo_10_en_horas)s, %(codigo_de_paro_11)s, %(codigo_11_en_horas)s, %(codigo_de_paro_12)s, %(codigo_12_en_horas)s, %(codigo_de_paro_13)s, %(codigo_13_en_horas)s, %(codigo_de_paro_14)s, %(codigo_14_en_horas)s, %(codigo_de_paro_15)s, %(codigo_15_en_horas)s, %(codigo_de_paro_16)s, %(codigo_16_en_horas)s, %(codigo_de_paro_17)s, %(codigo_17_en_horas)s, %(codigo_de_paro_18)s, %(codigo_18_en_horas)s, %(tiempo_de_paro)s, %(observaciones)s)]
+[parameters: [{'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': 'Juan Diego', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}, {'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': '', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}, {'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': '', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}, {'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': '', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}, {'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': 'Carlos Arturo Argüello Molsalve', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}, {'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': '', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}, {'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': 'Lorena T.', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}, {'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': '', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}  ... displaying 10 of 1000 total bound parameter sets ...  {'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': '', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}, {'codigo_de_paro_1': 0, 'sub_codigo_de_paro_1': 0, 'codigo_1_en_horas': 0, 'codigo_de_paro_2': 0, 'codigo_2_en_horas': 0, 'codigo_de_paro_3': 0, 'subcodigo_3': 0, 'codigo_3_en_horas': 0, 'codigo_de_paro_4': 0, 'codigo_4_en_horas': 0, 'codigo_de_paro_5': 0, 'subcodigo_5': '', 'codigo_5_en_horas': 0, 'area_involucrada_en_subcodigo_5': 0, 'personal_involucrado': '', 'codigo_de_paro_6': 0, 'codigo_6_en_horas': 0, 'codigo_de_paro_7': 0, 'codigo_7_en_horas': 0, 'codigo_de_paro_8': 0, 'codigo_8_en_horas': 0, 'codigo_de_paro_9': 0, 'codigo_9_en_horas': 0, 'codigo_de_paro_10': 0, 'codigo_10_en_horas': 0, 'codigo_de_paro_11': 0, 'codigo_11_en_horas': 0, 'codigo_de_paro_12': 0, 'codigo_12_en_horas': 0, 'codigo_de_paro_13': 0, 'codigo_13_en_horas': 0, 'codigo_de_paro_14': 0, 'codigo_14_en_horas': 0, 'codigo_de_paro_15': 0, 'codigo_15_en_horas': 0, 'codigo_de_paro_16': 0, 'codigo_16_en_horas': 0, 'codigo_de_paro_17': 0, 'codigo_17_en_horas': 0, 'codigo_de_paro_18': 0, 'codigo_18_en_horas': 0, 'tiempo_de_paro': 0, 'observaciones': ''}]]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-11-13 17:11:17,511 - INFO - ✅ Conectado a MySQL
+2025-11-13 17:11:17,512 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 17:11:21,747 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-13 17:30:01,793 - INFO - ✅ Conectado a MySQL
+2025-11-13 17:30:01,793 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 17:30:06,093 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-13 17:30:06,114 - ERROR - Error limpiando datos: 'DataFrame' object has no attribute 'tolist'
+2025-11-13 17:30:06,121 - ERROR - Traceback (most recent call last):
+  File "/workspaces/ProyectoOEE/etl/etl_structured.py", line 392, in clean_and_transform_data
+    ejemplos_despues = df[col].head(3).tolist()
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6318, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'tolist'
+
+2025-11-13 17:40:29,100 - INFO - ✅ Conectado a MySQL
+2025-11-13 17:40:29,100 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 17:40:33,329 - INFO - 🧹 Limpiando y transformando datos...
+2025-11-13 17:52:42,095 - INFO - ✅ Conectado a MySQL
+2025-11-13 17:52:42,095 - INFO - 📖 Leyendo archivo Excel complejo: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 17:52:46,966 - ERROR - ❌ Error ejecutando queries de limpieza: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'area_involucrada_en_subcodigo_5' in 'field list'
+[SQL: 
+                CREATE TABLE IF NOT EXISTS datos_limpios_temperas_vinilos AS
+                SELECT 
+                    -- Columnas de fecha y tiempo
+                    fecha,
+                    CASE 
+                        WHEN mes REGEXP '^[0-9]+$' THEN CAST(mes AS UNSIGNED)
+                        WHEN mes REGEXP '^[0-9]' THEN CAST(SUBSTRING(mes, 1, LOCATE(' ', mes) - 1) AS UNSIGNED)
+                        ELSE 0 
+                    END as mes,
+                    CASE 
+                        WHEN año REGEXP '^[0-9]+$' THEN CAST(año AS UNSIGNED)
+                        WHEN año REGEXP '^[0-9]' THEN CAST(SUBSTRING(año, 1, LOCATE(' ', año) - 1) AS UNSIGNED)
+                        ELSE 0 
+                    END as año,
+                    
+                    -- Columnas de texto (preservar original)
+                    maquina,
+                    operario,
+                    referencia,
+                    turno,
+                    tipo_paro,
+                    observaciones,
+                    personal_involucrado,
+                    area_involucrada_en_subcodigo_5,
+                    subcodigo_5,
+                    codigo_de_paro_1,
+                    sub_codigo_de_paro_1,
+                    codigo_de_paro_2,
+                    codigo_de_paro_3,
+                    subcodigo_3,
+                    codigo_de_paro_4,
+                    codigo_de_paro_5,
+                    codigo_de_paro_6,
+                    codigo_de_paro_7,
+                    codigo_de_paro_8,
+                    codigo_de_paro_9,
+                    codigo_de_paro_10,
+                    codigo_de_paro_11,
+                    codigo_de_paro_12,
+                    codigo_de_paro_13,
+                    codigo_de_paro_14,
+                    codigo_de_paro_15,
+                    codigo_de_paro_16,
+                    codigo_de_paro_17,
+                    codigo_de_paro_18,
+                    observaciones_de_paro,
+                    
+                    -- Columnas numéricas (extraer números de texto)
+                    CASE 
+                        WHEN pacas_producidas REGEXP '^[0-9]+$' THEN CAST(pacas_producidas AS DECIMAL(10,2))
+                        WHEN pacas_producidas REGEXP '^[0-9]' THEN CAST(SUBSTRING(pacas_producidas, 1, LOCATE(' ', pacas_producidas) - 1) AS DECIMAL(10,2))
+                        ELSE 0 
+                    END as pacas_producidas,
+                    
+                    CASE 
+                        WHEN horas_trabajadas REGEXP '^[0-9]+$' THEN CAST(horas_trabajadas AS DECIMAL(10,2))
+                        WHEN horas_trabajadas REGEXP '^[0-9]' THEN CAST(SUBSTRING(horas_trabajadas, 1, LOCATE(' ', horas_trabajadas) - 1) AS DECIMAL(10,2))
+                        ELSE 0 
+                    END as horas_trabajadas,
+                    
+                    CASE 
+                        WHEN horas_no_trabajadas REGEXP '^[0-9]+$' THEN CAST(horas_no_trabajadas AS DECIMAL(10,2))
+                        WHEN horas_no_trabajadas REGEXP '^[0-9]' THEN CAST(SUBSTRING(horas_no_trabajadas, 1, LOCATE(' ', horas_no_trabajadas) - 1) AS DECIMAL(10,2))
+                        ELSE 0 
+                    END as horas_no_trabajadas,
+                    
+                    CASE 
+                        WHEN tiempo_de_paro REGEXP '^[0-9]+$' THEN CAST(tiempo_de_paro AS DECIMAL(10,2))
+                        WHEN tiempo_de_paro REGEXP '^[0-9]' THEN CAST(SUBSTRING(tiempo_de_paro, 1, LOCATE(' ', tiempo_de_paro) - 1) AS DECIMAL(10,2))
+                        ELSE 0 
+                    END as tiempo_de_paro,
+                    
+                    -- Códigos de paro y horas (extraer números)
+                    CASE 
+                        WHEN codigo_1_en_horas REGEXP '^[0-9]+$' THEN CAST(codigo_1_en_horas AS DECIMAL(10,2))
+                        WHEN codigo_1_en_horas REGEXP '^[0-9]' THEN CAST(SUBSTRING(codigo_1_en_horas, 1, LOCATE(' ', codigo_1_en_horas) - 1) AS DECIMAL(10,2))
+                        ELSE 0 
+                    END as codigo_1_en_horas,
+                    
+                    -- Repetir para todos los códigos de horas...
+                    CASE 
+                        WHEN codigo_2_en_horas REGEXP '^[0-9]+$' THEN CAST(codigo_2_en_horas AS DECIMAL(10,2))
+                        WHEN codigo_2_en_horas REGEXP '^[0-9]' THEN CAST(SUBSTRING(codigo_2_en_horas, 1, LOCATE(' ', codigo_2_en_horas) - 1) AS DECIMAL(10,2))
+                        ELSE 0 
+                    END as codigo_2_en_horas,
+                    
+                    -- Columnas adicionales (mantener todas)
+                    unidades_producidas_cada_minuto,
+                    unidad_por_display,
+                    display_por_paca,
+                    producto
+                    
+                FROM datos_crudos_temperas_vinilos;
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-11-13 18:05:49,262 - INFO - ✅ Conectado a MySQL
+2025-11-13 18:05:49,262 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 18:05:54,812 - ERROR - ❌ Error ejecutando queries SQL: (mysql.connector.errors.ProgrammingError) 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*
+                    
+                FROM datos_crudos_temperas_vinilos' at line 42
+[SQL: 
+                CREATE TABLE IF NOT EXISTS datos_limpios_temperas_vinilos AS
+                SELECT 
+                    -- Columnas básicas
+                    fecha,
+                    mes,
+                    año,
+                    maquina,
+                    operario,
+                    referencia,
+                    
+                    -- Extraer números de texto (ej: "45 pacas" -> 45)
+                    CAST(REGEXP_REPLACE(pacas_producidas, '[^0-9.]', '') AS DECIMAL(10,2)) AS pacas_producidas,
+                    CAST(REGEXP_REPLACE(horas_trabajadas, '[^0-9.]', '') AS DECIMAL(10,2)) AS horas_trabajadas,
+                    CAST(REGEXP_REPLACE(horas_no_trabajadas, '[^0-9.]', '') AS DECIMAL(10,2)) AS horas_no_trabajadas,
+                    CAST(REGEXP_REPLACE(tiempo_de_paro, '[^0-9.]', '') AS DECIMAL(10,2)) AS tiempo_de_paro,
+                    
+                    -- Separar turno en inicio y final
+                    SUBSTRING_INDEX(turno, '-', 1) AS turno_inicio,
+                    SUBSTRING_INDEX(turno, '-', -1) AS turno_final,
+                    
+                    -- Códigos de paro (extraer números)
+                    CAST(REGEXP_REPLACE(codigo_1_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_1_en_horas,
+                    CAST(REGEXP_REPLACE(codigo_2_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_2_en_horas,
+                    CAST(REGEXP_REPLACE(codigo_3_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_3_en_horas,
+                    CAST(REGEXP_REPLACE(codigo_4_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_4_en_horas,
+                    CAST(REGEXP_REPLACE(codigo_5_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_5_en_horas,
+                    
+                    -- Textos originales (preservados)
+                    codigo_de_paro_1,
+                    sub_codigo_de_paro_1,
+                    codigo_de_paro_2,
+                    codigo_de_paro_3,
+                    subcodigo_3,
+                    codigo_de_paro_4,
+                    codigo_de_paro_5,
+                    subcodigo_5,
+                    area_involucrada_en_subcodigo_5,
+                    personal_involucrado,
+                    observaciones,
+                    
+                    -- Preservar todas las demás columnas
+                    *
+                    
+                FROM datos_crudos_temperas_vinilos;
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-11-13 18:12:44,668 - INFO - ✅ Conectado a MySQL
+2025-11-13 18:12:44,668 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 18:12:50,409 - ERROR - ❌ Error ejecutando queries SQL: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'area_involucrada_en_subcodigo_5' in 'field list'
+[SQL: 
+                CREATE TABLE IF NOT EXISTS datos_limpios_temperas_vinilos AS
+                SELECT 
+                    -- Columnas básicas
+                    fecha,
+                    mes,
+                    año,
+                    maquina,
+                    operario,
+                    referencia,
+                    
+                    -- Extraer números de texto (ej: "45 pacas" -> 45)
+                    CAST(REGEXP_REPLACE(pacas_producidas, '[^0-9.]', '') AS DECIMAL(10,2)) AS pacas_producidas,
+                    CAST(REGEXP_REPLACE(horas_trabajadas, '[^0-9.]', '') AS DECIMAL(10,2)) AS horas_trabajadas,
+                    CAST(REGEXP_REPLACE(horas_no_trabajadas, '[^0-9.]', '') AS DECIMAL(10,2)) AS horas_no_trabajadas,
+                    CAST(REGEXP_REPLACE(tiempo_de_paro, '[^0-9.]', '') AS DECIMAL(10,2)) AS tiempo_de_paro,
+                    
+                    -- Separar turno en inicio y final
+                    SUBSTRING_INDEX(turno, '-', 1) AS turno_inicio,
+                    SUBSTRING_INDEX(turno, '-', -1) AS turno_final,
+                    
+                    -- Códigos de paro (extraer números)
+                    CAST(REGEXP_REPLACE(codigo_1_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_1_en_horas,
+                    CAST(REGEXP_REPLACE(codigo_2_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_2_en_horas,
+                    CAST(REGEXP_REPLACE(codigo_3_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_3_en_horas,
+                    CAST(REGEXP_REPLACE(codigo_4_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_4_en_horas,
+                    CAST(REGEXP_REPLACE(codigo_5_en_horas, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_5_en_horas,
+                    
+                    -- Textos originales (preservados)
+                    codigo_de_paro_1,
+                    sub_codigo_de_paro_1,
+                    codigo_de_paro_2,
+                    codigo_de_paro_3,
+                    subcodigo_3,
+                    codigo_de_paro_4,
+                    codigo_de_paro_5,
+                    subcodigo_5,
+                    area_involucrada_en_subcodigo_5,
+                    personal_involucrado,
+                    observaciones
+                    
+                FROM datos_crudos_temperas_vinilos;
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-11-13 18:21:24,396 - INFO - ✅ Conectado a MySQL
+2025-11-13 18:21:24,396 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 18:21:30,016 - ERROR - ❌ Error ejecutando queries SQL: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'NULL' in 'field list'
+[SQL: 
+                CREATE TABLE IF NOT EXISTS datos_limpios_temperas_vinilos AS
+                SELECT 
+                    -- Columnas básicas
+                    `fecha` AS fecha,
+                    `mes` AS mes,
+                    `año` AS año,
+                    `maquina` AS maquina,
+                    `operario` AS operario,
+                    `referencia` AS referencia,
+                    
+                    -- Extraer números de texto (ej: "45 pacas" -> 45)
+                    CAST(REGEXP_REPLACE(`pacas_producidas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS pacas_producidas,
+                    CAST(REGEXP_REPLACE(`horas_trabajadas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS horas_trabajadas,
+                    CAST(REGEXP_REPLACE(`horas_no_trabajadas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS horas_no_trabajadas,
+                    CAST(REGEXP_REPLACE(`tiempo_de_paro`, '[^0-9.]', '') AS DECIMAL(10,2)) AS tiempo_de_paro,
+                    
+                    -- Separar turno en inicio y final
+                    SUBSTRING_INDEX(`turno`, '-', 1) AS turno_inicio,
+                    SUBSTRING_INDEX(`turno`, '-', -1) AS turno_final,
+                    
+                    -- Códigos de paro (extraer números)
+                    CAST(REGEXP_REPLACE(`codigo_1_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_1_en_horas,
+                    CAST(REGEXP_REPLACE(`codigo_2_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_2_en_horas,
+                    CAST(REGEXP_REPLACE(`codigo_3_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_3_en_horas,
+                    CAST(REGEXP_REPLACE(`codigo_4_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_4_en_horas,
+                    CAST(REGEXP_REPLACE(`codigo_5_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS codigo_5_en_horas,
+                    
+                    -- Textos originales (preservados)
+                    `codigo_de_paro_1` AS codigo_de_paro_1,
+                    `sub_codigo_de_paro_1` AS sub_codigo_de_paro_1,
+                    `codigo_de_paro_2` AS codigo_de_paro_2,
+                    `codigo_de_paro_3` AS codigo_de_paro_3,
+                    `subcodigo_3` AS subcodigo_3,
+                    `codigo_de_paro_4` AS codigo_de_paro_4,
+                    `codigo_de_paro_5` AS codigo_de_paro_5,
+                    `subcodigo_5` AS subcodigo_5,
+                    `NULL` AS area_involucrada_en_subcodigo_5,
+                    `personal_involucrado` AS personal_involucrado,
+                    `observaciones_de_paro` AS observaciones
+                    
+                FROM datos_crudos_temperas_vinilos;
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-11-13 18:26:04,212 - INFO - ✅ Conectado a MySQL
+2025-11-13 18:26:04,212 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
