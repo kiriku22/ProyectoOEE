@@ -446,3 +446,590 @@ AttributeError: 'DataFrame' object has no attribute 'tolist'
 (Background on this error at: https://sqlalche.me/e/20/f405)
 2025-11-13 18:26:04,212 - INFO - ✅ Conectado a MySQL
 2025-11-13 18:26:04,212 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-13 20:33:16,133 - INFO - ✅ Conectado a MySQL
+2025-11-13 20:33:16,137 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-18 03:45:23,731 - INFO - ✅ Conectado a MySQL
+2025-11-18 03:45:23,732 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-18 03:45:29,484 - ERROR - ❌ Error ejecutando queries SQL: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'codigo_01_en_horas' in 'field list'
+[SQL: 
+        CREATE TABLE IF NOT EXISTS temp_codigos_paro AS
+        SELECT *,
+            -- Extraer minutos de las columnas de códigos en horas
+            
+            CASE 
+                WHEN `codigo_01_en_horas` IS NOT NULL AND `codigo_01_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_01_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_01,
+            
+            CASE 
+                WHEN `codigo_02_en_horas` IS NOT NULL AND `codigo_02_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_02_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_02,
+            
+            CASE 
+                WHEN `codigo_03_en_horas` IS NOT NULL AND `codigo_03_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_03_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_03,
+            
+            CASE 
+                WHEN `codigo_04_en_horas` IS NOT NULL AND `codigo_04_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_04_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_04,
+            
+            CASE 
+                WHEN `codigo_05_en_horas` IS NOT NULL AND `codigo_05_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_05_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_05,
+            
+            CASE 
+                WHEN `codigo_06_en_horas` IS NOT NULL AND `codigo_06_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_06_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_06,
+            
+            CASE 
+                WHEN `codigo_07_en_horas` IS NOT NULL AND `codigo_07_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_07_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_07,
+            
+            CASE 
+                WHEN `codigo_08_en_horas` IS NOT NULL AND `codigo_08_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_08_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_08,
+            
+            CASE 
+                WHEN `codigo_09_en_horas` IS NOT NULL AND `codigo_09_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_09_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_09,
+            
+            CASE 
+                WHEN `codigo_10_en_horas` IS NOT NULL AND `codigo_10_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_10_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_10,
+            
+            CASE 
+                WHEN `codigo_11_en_horas` IS NOT NULL AND `codigo_11_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_11_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_11,
+            
+            CASE 
+                WHEN `codigo_12_en_horas` IS NOT NULL AND `codigo_12_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_12_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_12,
+            
+            CASE 
+                WHEN `codigo_13_en_horas` IS NOT NULL AND `codigo_13_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_13_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_13,
+            
+            CASE 
+                WHEN `codigo_14_en_horas` IS NOT NULL AND `codigo_14_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_14_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_14,
+            
+            CASE 
+                WHEN `codigo_15_en_horas` IS NOT NULL AND `codigo_15_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_15_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_15,
+            
+            CASE 
+                WHEN `codigo_16_en_horas` IS NOT NULL AND `codigo_16_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_16_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_16,
+            
+            CASE 
+                WHEN `codigo_17_en_horas` IS NOT NULL AND `codigo_17_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_17_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_17,
+            
+            CASE 
+                WHEN `codigo_18_en_horas` IS NOT NULL AND `codigo_18_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_18_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_18,
+            
+            -- Extraer solo el número del código de paro (ej: "codigo_de_paro_01" -> "01")
+            
+            CASE 
+                WHEN `codigo_de_paro_01` IS NOT NULL AND `codigo_de_paro_01` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_01`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_01,
+            
+            CASE 
+                WHEN `codigo_de_paro_02` IS NOT NULL AND `codigo_de_paro_02` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_02`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_02,
+            
+            CASE 
+                WHEN `codigo_de_paro_03` IS NOT NULL AND `codigo_de_paro_03` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_03`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_03,
+            
+            CASE 
+                WHEN `codigo_de_paro_04` IS NOT NULL AND `codigo_de_paro_04` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_04`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_04,
+            
+            CASE 
+                WHEN `codigo_de_paro_05` IS NOT NULL AND `codigo_de_paro_05` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_05`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_05,
+            
+            CASE 
+                WHEN `codigo_de_paro_06` IS NOT NULL AND `codigo_de_paro_06` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_06`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_06,
+            
+            CASE 
+                WHEN `codigo_de_paro_07` IS NOT NULL AND `codigo_de_paro_07` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_07`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_07,
+            
+            CASE 
+                WHEN `codigo_de_paro_08` IS NOT NULL AND `codigo_de_paro_08` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_08`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_08,
+            
+            CASE 
+                WHEN `codigo_de_paro_09` IS NOT NULL AND `codigo_de_paro_09` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_09`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_09,
+            
+            CASE 
+                WHEN `codigo_de_paro_10` IS NOT NULL AND `codigo_de_paro_10` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_10`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_10,
+            
+            CASE 
+                WHEN `codigo_de_paro_11` IS NOT NULL AND `codigo_de_paro_11` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_11`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_11,
+            
+            CASE 
+                WHEN `codigo_de_paro_12` IS NOT NULL AND `codigo_de_paro_12` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_12`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_12,
+            
+            CASE 
+                WHEN `codigo_de_paro_13` IS NOT NULL AND `codigo_de_paro_13` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_13`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_13,
+            
+            CASE 
+                WHEN `codigo_de_paro_14` IS NOT NULL AND `codigo_de_paro_14` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_14`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_14,
+            
+            CASE 
+                WHEN `codigo_de_paro_15` IS NOT NULL AND `codigo_de_paro_15` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_15`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_15,
+            
+            CASE 
+                WHEN `codigo_de_paro_16` IS NOT NULL AND `codigo_de_paro_16` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_16`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_16,
+            
+            CASE 
+                WHEN `codigo_de_paro_17` IS NOT NULL AND `codigo_de_paro_17` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_17`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_17,
+            
+            CASE 
+                WHEN `codigo_de_paro_18` IS NOT NULL AND `codigo_de_paro_18` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_18`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_18
+            
+        FROM datos_limpios_temperas_vinilos;
+        ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-11-18 03:52:48,132 - INFO - ✅ Conectado a MySQL
+2025-11-18 03:52:48,132 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-18 03:52:53,231 - ERROR - ❌ Error ejecutando queries SQL: (mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'codigo_6_en_horas' in 'field list'
+[SQL: 
+        CREATE TABLE IF NOT EXISTS temp_codigos_paro AS
+        SELECT *,
+            -- Extraer minutos de las columnas de códigos en horas
+            
+            CASE 
+                WHEN `codigo_1_en_horas` IS NOT NULL AND `codigo_1_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_1_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_1,
+            
+            CASE 
+                WHEN `codigo_2_en_horas` IS NOT NULL AND `codigo_2_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_2_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_2,
+            
+            CASE 
+                WHEN `codigo_3_en_horas` IS NOT NULL AND `codigo_3_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_3_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_3,
+            
+            CASE 
+                WHEN `codigo_4_en_horas` IS NOT NULL AND `codigo_4_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_4_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_4,
+            
+            CASE 
+                WHEN `codigo_5_en_horas` IS NOT NULL AND `codigo_5_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_5_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_5,
+            
+            CASE 
+                WHEN `codigo_6_en_horas` IS NOT NULL AND `codigo_6_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_6_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_6,
+            
+            CASE 
+                WHEN `codigo_7_en_horas` IS NOT NULL AND `codigo_7_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_7_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_7,
+            
+            CASE 
+                WHEN `codigo_8_en_horas` IS NOT NULL AND `codigo_8_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_8_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_8,
+            
+            CASE 
+                WHEN `codigo_9_en_horas` IS NOT NULL AND `codigo_9_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_9_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_9,
+            
+            CASE 
+                WHEN `codigo_10_en_horas` IS NOT NULL AND `codigo_10_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_10_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_10,
+            
+            CASE 
+                WHEN `codigo_11_en_horas` IS NOT NULL AND `codigo_11_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_11_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_11,
+            
+            CASE 
+                WHEN `codigo_12_en_horas` IS NOT NULL AND `codigo_12_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_12_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_12,
+            
+            CASE 
+                WHEN `codigo_13_en_horas` IS NOT NULL AND `codigo_13_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_13_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_13,
+            
+            CASE 
+                WHEN `codigo_14_en_horas` IS NOT NULL AND `codigo_14_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_14_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_14,
+            
+            CASE 
+                WHEN `codigo_15_en_horas` IS NOT NULL AND `codigo_15_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_15_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_15,
+            
+            CASE 
+                WHEN `codigo_16_en_horas` IS NOT NULL AND `codigo_16_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_16_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_16,
+            
+            CASE 
+                WHEN `codigo_17_en_horas` IS NOT NULL AND `codigo_17_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_17_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_17,
+            
+            CASE 
+                WHEN `codigo_18_en_horas` IS NOT NULL AND `codigo_18_en_horas` != '' 
+                THEN CAST(REGEXP_REPLACE(`codigo_18_en_horas`, '[^0-9.]', '') AS DECIMAL(10,2))
+                ELSE 0 
+            END AS minutos_paro_18,
+            
+            -- Extraer solo el número del código de paro (ej: "codigo_de_paro_1" -> "1")
+            
+            CASE 
+                WHEN `codigo_de_paro_1` IS NOT NULL AND `codigo_de_paro_1` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_1`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_1,
+            
+            CASE 
+                WHEN `codigo_de_paro_2` IS NOT NULL AND `codigo_de_paro_2` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_2`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_2,
+            
+            CASE 
+                WHEN `codigo_de_paro_3` IS NOT NULL AND `codigo_de_paro_3` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_3`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_3,
+            
+            CASE 
+                WHEN `codigo_de_paro_4` IS NOT NULL AND `codigo_de_paro_4` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_4`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_4,
+            
+            CASE 
+                WHEN `codigo_de_paro_5` IS NOT NULL AND `codigo_de_paro_5` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_5`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_5,
+            
+            CASE 
+                WHEN `codigo_de_paro_6` IS NOT NULL AND `codigo_de_paro_6` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_6`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_6,
+            
+            CASE 
+                WHEN `codigo_de_paro_7` IS NOT NULL AND `codigo_de_paro_7` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_7`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_7,
+            
+            CASE 
+                WHEN `codigo_de_paro_8` IS NOT NULL AND `codigo_de_paro_8` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_8`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_8,
+            
+            CASE 
+                WHEN `codigo_de_paro_9` IS NOT NULL AND `codigo_de_paro_9` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_9`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_9,
+            
+            CASE 
+                WHEN `codigo_de_paro_10` IS NOT NULL AND `codigo_de_paro_10` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_10`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_10,
+            
+            CASE 
+                WHEN `codigo_de_paro_11` IS NOT NULL AND `codigo_de_paro_11` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_11`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_11,
+            
+            CASE 
+                WHEN `codigo_de_paro_12` IS NOT NULL AND `codigo_de_paro_12` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_12`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_12,
+            
+            CASE 
+                WHEN `codigo_de_paro_13` IS NOT NULL AND `codigo_de_paro_13` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_13`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_13,
+            
+            CASE 
+                WHEN `codigo_de_paro_14` IS NOT NULL AND `codigo_de_paro_14` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_14`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_14,
+            
+            CASE 
+                WHEN `codigo_de_paro_15` IS NOT NULL AND `codigo_de_paro_15` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_15`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_15,
+            
+            CASE 
+                WHEN `codigo_de_paro_16` IS NOT NULL AND `codigo_de_paro_16` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_16`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_16,
+            
+            CASE 
+                WHEN `codigo_de_paro_17` IS NOT NULL AND `codigo_de_paro_17` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_17`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_17,
+            
+            CASE 
+                WHEN `codigo_de_paro_18` IS NOT NULL AND `codigo_de_paro_18` != '' 
+                THEN REGEXP_SUBSTR(`codigo_de_paro_18`, '[0-9]+')
+                ELSE NULL 
+            END AS numero_codigo_paro_18
+            
+        FROM datos_limpios_temperas_vinilos;
+        ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-11-18 03:59:38,041 - INFO - ✅ Conectado a MySQL
+2025-11-18 03:59:38,041 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-18 03:59:43,020 - ERROR - ❌ Error ejecutando queries SQL: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'TEMPERAS.datos_paros_procesados' doesn't exist
+[SQL: 
+                CREATE TABLE IF NOT EXISTS analisis_paros AS
+                SELECT 
+                    fecha, mes, maquina, operario,
+                    numero_codigo_paro_1, minutos_paro_1,
+                    numero_codigo_paro_2, minutos_paro_2,
+                    numero_codigo_paro_3, minutos_paro_3,
+                    numero_codigo_paro_4, minutos_paro_4,
+                    numero_codigo_paro_5, minutos_paro_5,
+                    numero_codigo_paro_6, minutos_paro_6,
+                    numero_codigo_paro_7, minutos_paro_7,
+                    numero_codigo_paro_8, minutos_paro_8,
+                    numero_codigo_paro_9, minutos_paro_9,
+                    numero_codigo_paro_10, minutos_paro_10,
+                    numero_codigo_paro_11, minutos_paro_11,
+                    numero_codigo_paro_12, minutos_paro_12,
+                    numero_codigo_paro_13, minutos_paro_13,
+                    numero_codigo_paro_14, minutos_paro_14,
+                    numero_codigo_paro_15, minutos_paro_15,
+                    numero_codigo_paro_16, minutos_paro_16,
+                    numero_codigo_paro_17, minutos_paro_17,
+                    numero_codigo_paro_18, minutos_paro_18,
+                    (COALESCE(minutos_paro_1, 0) + COALESCE(minutos_paro_2, 0) + COALESCE(minutos_paro_3, 0) + COALESCE(minutos_paro_4, 0) + COALESCE(minutos_paro_5, 0) + COALESCE(minutos_paro_6, 0) + COALESCE(minutos_paro_7, 0) + COALESCE(minutos_paro_8, 0) + COALESCE(minutos_paro_9, 0) + COALESCE(minutos_paro_10, 0) + COALESCE(minutos_paro_11, 0) + COALESCE(minutos_paro_12, 0) + COALESCE(minutos_paro_13, 0) + COALESCE(minutos_paro_14, 0) + COALESCE(minutos_paro_15, 0) + COALESCE(minutos_paro_16, 0) + COALESCE(minutos_paro_17, 0) + COALESCE(minutos_paro_18, 0)) as total_minutos_paro
+                FROM datos_paros_procesados;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-11-18 04:01:20,516 - INFO - ✅ Conectado a MySQL
+2025-11-18 04:01:20,516 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-18 04:01:25,349 - ERROR - ❌ Error ejecutando queries SQL: (mysql.connector.errors.ProgrammingError) 1060 (42S21): Duplicate column name 'codigo_de_paro_2'
+[SQL: 
+                CREATE TABLE IF NOT EXISTS datos_limpios_temperas_vinilos AS
+                SELECT 
+                    -- Columnas básicas
+                    `fecha` AS fecha,
+                    `mes` AS mes,
+                    `año` AS año,
+                    `maquina` AS maquina,
+                    `operario` AS operario,
+                    `referencia` AS referencia,
+                    
+                    -- Extraer números de texto (ej: "45 pacas" -> 45)
+                    CAST(REGEXP_REPLACE(`pacas_producidas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS pacas_producidas,
+                    CAST(REGEXP_REPLACE(`horas_trabajadas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS horas_trabajadas,
+                    CAST(REGEXP_REPLACE(`horas_no_trabajadas`, '[^0-9.]', '') AS DECIMAL(10,2)) AS horas_no_trabajadas,
+                    CAST(REGEXP_REPLACE(`tiempo_de_paro`, '[^0-9.]', '') AS DECIMAL(10,2)) AS tiempo_de_paro,
+                    
+                    -- Separar turno en inicio y final
+                    SUBSTRING_INDEX(`turno`, '-', 1) AS turno_inicio,
+                    SUBSTRING_INDEX(`turno`, '-', -1) AS turno_final,
+                    -- Códigos de paro 1 (preservar texto original para procesamiento posterior)
+                    `codigo_1_en_horas` AS Codigo_1_en_horas,
+                    `codigo_de_paro_1` AS Codigo_de_paro_1,
+                    -- Códigos de paro 2 (preservar texto original para procesamiento posterior)
+                    `codigo_2_en_horas` AS Codigo_2_en_horas,
+                    `codigo_de_paro_2` AS Codigo_de_paro_2,
+                    -- Códigos de paro 3 (preservar texto original para procesamiento posterior)
+                    `codigo_3_en_horas` AS Codigo_3_en_horas,
+                    `codigo_de_paro_3` AS Codigo_de_paro_3,
+                    -- Códigos de paro 4 (preservar texto original para procesamiento posterior)
+                    `codigo_4_en_horas` AS Codigo_4_en_horas,
+                    `codigo_de_paro_4` AS Codigo_de_paro_4,
+                    -- Códigos de paro 5 (preservar texto original para procesamiento posterior)
+                    `codigo_5_en_horas` AS Codigo_5_en_horas,
+                    `codigo_de_paro_5` AS Codigo_de_paro_5,
+                    -- Códigos de paro 6 (preservar texto original para procesamiento posterior)
+                    `codigo_6_en_horas` AS Codigo_6_en_horas,
+                    `codigo_de_paro_6` AS Codigo_de_paro_6,
+                    -- Códigos de paro 7 (preservar texto original para procesamiento posterior)
+                    `codigo_7_en_horas` AS Codigo_7_en_horas,
+                    `codigo_de_paro_7` AS Codigo_de_paro_7,
+                    -- Códigos de paro 8 (preservar texto original para procesamiento posterior)
+                    `codigo_8_en_horas` AS Codigo_8_en_horas,
+                    `codigo_de_paro_8` AS Codigo_de_paro_8,
+                    -- Códigos de paro 9 (preservar texto original para procesamiento posterior)
+                    `codigo_9_en_horas` AS Codigo_9_en_horas,
+                    `codigo_de_paro_9` AS Codigo_de_paro_9,
+                    -- Códigos de paro 10 (preservar texto original para procesamiento posterior)
+                    `codigo_10_en_horas` AS Codigo_10_en_horas,
+                    `codigo_de_paro_10` AS Codigo_de_paro_10,
+                    -- Códigos de paro 11 (preservar texto original para procesamiento posterior)
+                    `codigo_11_en_horas` AS Codigo_11_en_horas,
+                    `codigo_de_paro_11` AS Codigo_de_paro_11,
+                    -- Códigos de paro 12 (preservar texto original para procesamiento posterior)
+                    `codigo_12_en_horas` AS Codigo_12_en_horas,
+                    `codigo_de_paro_12` AS Codigo_de_paro_12,
+                    -- Códigos de paro 13 (preservar texto original para procesamiento posterior)
+                    `codigo_13_en_horas` AS Codigo_13_en_horas,
+                    `codigo_de_paro_13` AS Codigo_de_paro_13,
+                    -- Códigos de paro 14 (preservar texto original para procesamiento posterior)
+                    `codigo_14_en_horas` AS Codigo_14_en_horas,
+                    `codigo_de_paro_14` AS Codigo_de_paro_14,
+                    -- Códigos de paro 15 (preservar texto original para procesamiento posterior)
+                    `codigo_15_en_horas` AS Codigo_15_en_horas,
+                    `codigo_de_paro_15` AS Codigo_de_paro_15,
+                    -- Códigos de paro 16 (preservar texto original para procesamiento posterior)
+                    `codigo_16_en_horas` AS Codigo_16_en_horas,
+                    `codigo_de_paro_16` AS Codigo_de_paro_16,
+                    -- Códigos de paro 17 (preservar texto original para procesamiento posterior)
+                    `codigo_17_en_horas` AS Codigo_17_en_horas,
+                    `codigo_de_paro_17` AS Codigo_de_paro_17,
+                    -- Códigos de paro 18 (preservar texto original para procesamiento posterior)
+                    `codigo_18_en_horas` AS Codigo_18_en_horas,
+                    `codigo_de_paro_18` AS Codigo_de_paro_18,
+                    
+                    -- Textos originales adicionales (preservados para extracción)
+                    `sub_codigo_de_paro_1` AS sub_codigo_de_paro_1,
+                    `codigo_de_paro_2` AS codigo_de_paro_2,
+                    `codigo_de_paro_3` AS codigo_de_paro_3,
+                    `subcodigo_3` AS subcodigo_3,
+                    `codigo_de_paro_4` AS codigo_de_paro_4,
+                    `codigo_de_paro_5` AS codigo_de_paro_5,
+                    `subcodigo_5` AS subcodigo_5,
+                    NULL AS area_involucrada_en_subcodigo_5,
+                    `personal_involucrado` AS personal_involucrado,
+                    `observaciones_de_paro` AS observaciones
+                    
+                FROM datos_crudos_temperas_vinilos;
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-11-18 04:18:40,326 - INFO - ✅ Conectado a MySQL
+2025-11-18 04:18:40,326 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-18 04:28:47,158 - INFO - ✅ Conectado a MySQL
+2025-11-18 04:28:47,158 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-18 04:31:20,998 - INFO - ✅ Conectado a MySQL
+2025-11-18 04:31:20,999 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
