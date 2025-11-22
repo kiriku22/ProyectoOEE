@@ -1,2 +1,0 @@
-SELECT operario, LPAD(pacas_producidas,2,0) FROM  TEMPERAS.produccion_operario WHERE pacas_producidas != 0 ORDER BY operario;
-SELECT distinct(operario) FROM TEMPERAS.produccion_operario where operario != '' and not operario like 'No%';
