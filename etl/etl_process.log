@@ -1033,3 +1033,8 @@ AttributeError: 'DataFrame' object has no attribute 'tolist'
 2025-11-18 04:28:47,158 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
 2025-11-18 04:31:20,998 - INFO - ✅ Conectado a MySQL
 2025-11-18 04:31:20,999 - INFO - 📖 Leyendo archivo Excel: /workspaces/ProyectoOEE/etl/SEGUIMIENTO TEMPERAS Y VINILOS Actividad.xlsm
+2025-11-25 03:51:56,880 - etl_temperas_vinilos - INFO - 🚀 Iniciando ETL Híbrido - Python + SQL
+2025-11-25 03:53:03,307 - etl_temperas_vinilos - INFO - 🚀 Iniciando ETL Híbrido - Python + SQL
+2025-11-25 04:01:24,087 - etl_temperas_vinilos - INFO - 🚀 Iniciando ETL Híbrido - Python + SQL
+2025-11-25 04:11:35,643 - etl_temperas_vinilos - INFO - 🚀 Iniciando ETL Híbrido - Python + SQL
+2025-11-25 04:11:44,068 - etl_temperas_vinilos - INFO - 🎉 ETL HÍBRIDO COMPLETADO EXITOSAMENTE!
